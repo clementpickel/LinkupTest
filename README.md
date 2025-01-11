@@ -4,8 +4,9 @@ LinkupTest est un projet conçu pour intégrer des assistants IA avec accès au 
 
 ## Result
 
-The first message is Gemini + Linkup, the second is only Gemini.
-![Example](assets/example.png)
+The first message is Gemini + Linkup, the second is only Gemini. It is a basic example but we can already see that with Linkup the a response can be obtained and is sourced which prevent hallucination and give reliable sources to explore for more details.
+
+![Example](assets/long_example.png)
 
 ## Structure du projet
 

@@ -22,10 +22,12 @@ resources: {linkup_result}
     print("linkup result:", linkup_result)
     print("query:", query)
     print("response:", response)
+    response = "Gemini + Linkup answer:\n" + response
     response_message = cl.Message(content=response)
     await response_message.send()
 
     response_nohelp = await gemini.send(message.content)
+    response_nohelp = "Gemini answer:\n" + response_nohelp
     response_nohelp_message = cl.Message(content=response_nohelp)
     await response_nohelp_message.send()
     
