@@ -17,15 +17,16 @@ Give your sources.
 question: {message.content}
 resources: {linkup_result}
 """
-    response = await gemini.send(query)
-    response = "Gemini + Linkup answer:\n" + response
-    response_message = cl.Message(content=response)
-    await response_message.send()
-
+    
     response_nohelp = await gemini.send(message.content)
     response_nohelp = "Gemini answer:\n" + response_nohelp
     response_nohelp_message = cl.Message(content=response_nohelp)
     await response_nohelp_message.send()
+
+    response = await gemini.send(query)
+    response = "Gemini + Linkup answer:\n" + response
+    response_message = cl.Message(content=response)
+    await response_message.send()
 
     response_linkup = linkup.search(query=message.content, output_type="sourcedAnswer")
     response_linkup = "Linkup answer:\n" + str(response_linkup.answer)
