@@ -4,8 +4,6 @@ LinkupTest est un projet conçu pour intégrer des assistants IA avec accès au 
 
 ## Result
 
-The first message is Gemini + Linkup, the second is only Gemini. It is a basic example but we can already see that with Linkup the a response can be obtained and is sourced which prevent hallucination and give reliable sources to explore for more details.
-
 ![Example](assets/long_example.png)
 
 ## Structure du projet
@@ -47,6 +45,7 @@ src/
     LINKUP_APIKEY = "votre_clé_api_linkup"
     GEMINI_APIKEY = "votre_clé_api_gemini"
 `
+   Vous pouvez générer ces clés à [Linkup](https://app.linkup.so/home) et [Gemini](https://aistudio.google.com/app/apikey).
 
 2. Modifiez le fichier config.toml dans le dossier .chainlit selon vos besoins.
 
@@ -58,10 +57,14 @@ Pour lancer le projet, exécutez la commande suivante :
 chainlit run src/main.py
 ```
 
+Vous trouverez ensuite l'application à http://localhost:8000.
+
 ## Fonctionnalités
 
 - Recherche d'informations sur le web via l'API Linkup.
 - Réponses générées par l'IA Gemini.
+- Réponses générées par l'IA Gemini avec les informations fournit par Linkup.
+- Réponses générées par l'IA de Linkup.
 
 ## Licence
 
