@@ -16,7 +16,6 @@ chainlit.md
 LICENSE
 public/
 README.md
-res.json
 src/
    env.py
    gemini.py

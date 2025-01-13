@@ -5,8 +5,6 @@ from gemini import Gemini
 linkup = LinkupInstance()
 gemini = Gemini()
 
-chat = None
-
 @cl.on_message
 async def main(message: cl.Message):
     linkup_result = linkup.search(query=message.content)
