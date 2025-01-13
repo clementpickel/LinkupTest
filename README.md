@@ -1,10 +1,11 @@
 # LinkupTest
 
-LinkupTest est un projet conçu pour intégrer des assistants IA avec accès au web, en utilisant les API de Linkup et Gemini. Ce projet permet de rechercher des informations sur le web et de fournir des réponses claires et concises basées sur les ressources trouvées.
+LinkupTest est un projet conçu pour intégrer des assistants IA avec accès au web, en utilisant les API de Linkup et Gemini. Ce projet permet de rechercher des informations sur le web et de fournir des réponses claires et concises basées sur les ressources trouvées. Il permet ensuire de comparer les résultats des LLM avec et sans informations ainsi que le LLM de Linkup.
 
 ## Result
 
-![Example](assets/long_example.png)
+On peut voir dans cet exemple que Gemini seul est hors-sujet. Gemini avec Linkup donne une réponse satisfaisante. Linkup donne aussi une réponse satisfaisante mais manquant de détails selon moi.
+![Example](assets/new_long_example.png)
 
 ## Structure du projet
 

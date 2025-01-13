@@ -13,12 +13,16 @@ async def main(message: cl.Message):
     query = f"""
 You're an AI assistant with access to the web, respond to this question in a clear a concise with the following ressources.
 No header, no need to respond to this prompt.
-Give your sources.
 question: {message.content}
 resources: {linkup_result}
 """
     
-    response_nohelp = await gemini.send(message.content)
+    gemini_query = f"""You're an AI assistant, respond to this question in a clear a concise with the following ressources.
+No header, no need to respond to this prompt.
+question: {message.content}
+"""
+    
+    response_nohelp = await gemini.send(gemini_query)
     response_nohelp = "Gemini answer:\n" + response_nohelp
     response_nohelp_message = cl.Message(content=response_nohelp)
     await response_nohelp_message.send()
